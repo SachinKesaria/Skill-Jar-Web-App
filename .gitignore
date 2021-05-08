@@ -9,6 +9,10 @@
 *.user
 *.userosscache
 *.sln.docstates
+#ignores
+firebase.json
+.gitignore
+.firebasesrc
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -348,6 +352,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-firebase.json
-.gitignore
-.firebasesrc
+
