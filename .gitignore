@@ -12,7 +12,7 @@
 #ignores
 firebase.json
 .gitignore
-.firebasesrc
+.firebaserc
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
