@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Regitration</title>
+    <link rel="stylesheet" href="project_stdreg.css">
+</head>
+
+<body id="main" onload="load(),checkCookie()">
+    <div id="nav">
+        <a href="index.html" class="nav-link" id="link1" onClick="active(this.id)">Home</a>
+        <a href="#">Event Registration</a>
+
+    </div>
+
+    <div id="lside">
+        <h2>Upcoming Events:</h2>
+        <img id="limg1">
+        <div style="text-align:center">
+            <span class="dot" onclick="showSlidel1(0)"></span>
+            <span class="dot" onclick="showSlidel1(1)"></span>
+            <div id="Sidenav" class="sidenav">
+                <button id="toggle">Dark Mode</button>
+
+            </div>
+        </div>
+        <img id="limg2">
+        <div style="text-align:center">
+            <span class="dot" onclick="showSlidel2(0)"></span>
+            <span class="dot" onclick="showSlidel2(1)"></span>
+
+        </div>
+    </div>
+    <div id="form-main">
+        <div id="form-header">
+            <h2>Event Registration</h2>
+            <img src="./images/reg.jpg" alt="Registration-image" id="regimg">
+        </div>
+        <div id="info">
+            <form id="reg">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="regno">Registration Number:</label>
+                <input type="number" name="regno" id="regno" min="1000000" max="9999999" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="attend">Attendance(in %):</label>
+                <input type="number" name="attend" id="attend" minlength="1" maxlength="2" required>
+                <label for="dropdown">Select a Workshop:</label>
+                <select name="dropdown" id="ws" required onclick="checku()">
+                    <option id="w1" value="workshop1">Workshop 1</option>
+                    <option id="w2" value="workshop2">Workshop 2</option>
+                    <option id="w3" value="workshop3">Workshop 3</option>
+                    <option id="w4" value="workshop4">Workshop 4</option>
+                </select>
+                <label for="speaker">Speaker(s)</label>
+                <input type="text" name="speaker" id="speaker" disabled>
+                <input type="checkbox" name="check" id="check" required><span>Do you wish to get further details and
+                    reminders?</span>
+                <input type="submit" name="submit" id="submit" value="Submit" onclick="sub(),userAction(),reset()">
+            </form>
+        </div>
+    </div>
+
+    <div id="rside">
+        <h2>Upcoming Events:</h2>
+        <img id="rimg1">
+        <div style="text-align:center">
+            <span class="dot" onclick="showSlider1(0)"></span>
+            <span class="dot" onclick="showSlider1(1)"></span>
+        </div>
+        <img id="rimg2">
+        <div style="text-align:center">
+            <span class="dot" onclick="showSlider2(0)"></span>
+            <span class="dot" onclick="showSlider2(1)"></span>
+            <span class="dot" onclick="showSlider2(2)"></span>
+        </div>
+    </div>
+
+    <script>
+
+        const userAction = async () => {
+            var drop = document.getElementById("ws");
+            var selectedValue = drop.value;
+            myBody = { ename: selectedValue, name: document.getElementById("name").value, reg: document.getElementById("regno").value, attd: document.getElementById("attend").value };
+            fetch('http://localhost:3001/api/eventregistration/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                //console.log(data);
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+        function load() {
+            var an = document.getElementById("main").style.animationPlayState = "running";
+        }
+        var larr1 = ["https://christuniversity.in/uploads/events/thumb/545858886_2020-09-29_01-58-19.jpg", "https://christuniversity.in/uploads/events/thumb/1095081938_2020-10-01_04-17-00.jpg"];
+        var larr2 = ["https://christuniversity.in/uploads/events/thumb/382266101_2020-09-14_03-20-04.jpg", "https://christuniversity.in/uploads/events/thumb/1598339033_2020-09-21_03-57-08.jpg"];
+        var rarr1 = ["https://christuniversity.in/uploads/events/thumb/1151839756_2020-10-01_04-36-50.jpg", "https://christuniversity.in/uploads/events/thumb/184387672_2020-09-30_11-31-07.jpg"];
+        var rarr2 = ["https://christuniversity.in/uploads/events/thumb/1933074770_2020-10-01_03-36-38.jpg", "https://christuniversity.in/uploads/events/thumb/1768064024_2020-09-19_11-14-58.jpg", "https://christuniversity.in/uploads/events/thumb/1095081938_2020-10-01_04-17-00.jpg"];
+        var i = 0, j = 0, k = 0, m = 0;
+        var l1 = document.getElementById("limg1");
+        var l2 = document.getElementById("limg2");
+        var r1 = document.getElementById("rimg1");
+        var r2 = document.getElementById("rimg2");
+
+        var dot = document.getElementsByClassName("dot");
+        l1.src = larr1[0];
+        l2.src = larr2[0];
+        r1.src = rarr1[0];
+        r2.src = rarr2[0];
+
+        function showSlidel1(a) {
+            l1.src = larr1[a];
+
+        }
+        function showSlidel2(a) {
+            l2.src = larr2[a];
+
+        }
+        function showSlider1(a) {
+            r1.src = rarr1[a];
+        }
+        function showSlider2(a) {
+            r2.src = rarr2[a];
+        }
+
+        var speaker = ["Dr.Ravi", "Dr.James", "Dr.Williams", "Dr.George"];
+
+        function checku() {
+            var s = document.getElementById("ws").value;
+            if (s == "workshop1") {
+                document.getElementById("speaker").value = speaker[0];
+            }
+            if (s == "workshop2") {
+                document.getElementById("speaker").value = speaker[1];
+            }
+            if (s == "workshop3") {
+                document.getElementById("speaker").value = speaker[2];
+            }
+            if (s == "workshop4") {
+                document.getElementById("speaker").value = speaker[3];
+            }
+        }
+
+        function sub() {
+            event.preventDefault();
+        }
+
+        function reset() {
+            document.getElementById("reg").reset();
+        }
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var mode;
+        function checkCookie() {
+            mode = getCookie("mode");
+            user = getCookie("user");
+            console.log(user);
+            if (mode != "") {
+                mode = mode;
+            } else {
+                mode = "lightmode";
+                setCookie("mode", mode, 365);
+            }
+
+            setMode();
+        }
+
+        document.getElementById("toggle").addEventListener("click", function () {
+
+            setMode();
+        });
+
+
+        function setMode() {
+            var x = document.getElementById("lside");
+            var y = document.getElementById("rside");
+            var z = document.getElementById("form-header");
+            var k1 = document.getElementById("limg1");
+            var k2 = document.getElementById("limg2");
+            var k3 = document.getElementById("rimg1");
+            var k4 = document.getElementById("rimg2");
+            var mid = document.getElementById("form-main");
+            var modbt = document.getElementById("toggle");
+
+
+            if (mode == "darkmode") {
+
+                document.getElementById("main").style.backgroundColor = "grey";
+                nav.style.backgroundColor = "black";
+                x.style.backgroundColor = "black";
+                y.style.backgroundColor = "black";
+                z.style.backgroundColor = "black";
+                x.style.border = "2px solid white";
+                y.style.border = "2px solid white";
+                mid.style.border = "2px solid white";
+                k1.style.boxShadow = "4px 4px 4px 1px tomato";
+                k2.style.boxShadow = "4px 4px 4px 1px tomato";
+                k3.style.boxShadow = "4px 4px 4px 1px tomato";
+                k4.style.boxShadow = "4px 4px 4px 1px tomato";
+                mode = "lightmode";
+                setCookie("mode", "darkmode", 365);
+                console.log("Inside Dark Mode" + mode);
+                modbt.innerHTML = "Light Mode";
+                modbt.style.backgroundColor = "blue"
+
+            }
+
+            else {
+
+                document.getElementById("main").style.backgroundColor = "white";
+                nav.style.backgroundColor = "rgb(255, 168, 7)";
+                x.style.backgroundColor = "rgb(30, 162, 202)";
+                y.style.backgroundColor = " rgb(30, 162, 202)";
+                z.style.backgroundColor = " rgb(141, 120, 219)";
+                x.style.border = "2px solid black";
+                y.style.border = "2px solid black";
+                k1.style.border = "2px solid white";
+                k2.style.border = "2px solid white";
+                k3.style.border = "2px solid white";
+                k4.style.border = "2px solid white";
+                mid.style.border = "2px solid black";
+                k1.style.boxShadow = "none";
+                k2.style.boxShadow = "none";
+                k3.style.boxShadow = "none";
+                k4.style.boxShadow = "none";
+                mode = "darkmode";
+                setCookie("mode", "lightmode", 365);
+                console.log("Inside Dark Mode" + mode);
+                modbt.innerHTML = "Dark Mode";
+                modbt.style.backgroundColor = "black"
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

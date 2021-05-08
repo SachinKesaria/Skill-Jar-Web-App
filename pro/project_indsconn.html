@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Industry Connect</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="project_indsconn.css">
+</head>
+
+<body onscroll="sc()" onload="load(),checkCookie(),onloadAction()" id="main">
+    <div id="nav">
+        <h1 id="head">Industry Connect</h1>
+        <a href="index.html" class="navele">Home</a>
+        <a href="#intern1" class="navele">Internships</a>
+        <a href="#prohead" class="navele">On Campus Projects</a>
+    </div>
+
+    <div class="container" id="intern1">
+        <img src="./images/i1.png">
+        <h1 class="iname">Full Stack Development</h1>
+        <h2 class="iins">AK Technologies</h2>
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i> Banglore</p>
+
+        <span><i class="fa fa-calendar fa-2x" aria-hidden="true"></i> Duration</span>
+        <span><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i> Stipend </span>
+        <span><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> Apply By</span><br>
+
+        <span class="in-info">6 Months</span>
+        <span class="in-info"> Rs.10,000</span>
+        <span class="in-info"> 12th October'20</span>
+        <button onclick="apply(this.parentElement.id)" class="student" name="subbut">More Info</button>
+        <button class="teach">More Info</button>
+
+    </div>
+    <div id="Sidenav" class="sidenav">
+        <button id="toggle">Dark Mode</button>
+
+    </div>
+    <div class="container" id="intern2">
+        <img src="./images/i2.png">
+        <h1 class="iname">Android-Flutter App Development</h1>
+        <h2 class="iins">Hindel Solutions</h2>
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i> Banglore</p>
+
+        <span><i class="fa fa-calendar fa-2x" aria-hidden="true"></i> Duration</span>
+        <span><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i> Stipend </span>
+        <span><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> Apply By</span><br>
+
+        <span class="in-info">6 Months</span>
+        <span class="in-info"> Rs.8,000</span>
+        <span class="in-info"> 28th October'20</span>
+        <button onclick="apply(this.parentElement.id)" class="student" name="subbut">More Info</button>
+        <button class="teach">More Info</button>
+
+    </div>
+
+    <div class="container" id="intern3">
+        <img src="./images/i3.png">
+        <h1 class="iname">Front-end Web Development</h1>
+        <h2 class="iins">UPE Laboratories</h2>
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i> Banglore</p>
+
+        <span><i class="fa fa-calendar fa-2x" aria-hidden="true"></i> Duration</span>
+        <span><i class="fa fa-suitcase fa-2x" aria-hidden="true"></i> Stipend </span>
+        <span><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i> Apply By</span><br>
+
+        <span class="in-info">6 Months</span>
+        <span class="in-info"> Rs.8,000</span>
+        <span class="in-info"> 28th October'20</span>
+        <button onclick="apply(this.parentElement.id)" class="student" name="subbut">More Info</button>
+        <button class="teach">More Info</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="form">
+                <h1 id="iname"></h1>
+                <hr>
+                <form>
+                    <div class="i1">
+                        <h2>About Us</h2>
+                        We're a trusted collaborator and partner. We develop result-oriented growth strategies and
+                        continuously fine-tune marketing campaigns for the best results. From full-scale digital
+                        marketing
+                        strategy to planned execution and reporting, we've got you covered. It's about embracing your
+                        brand's vision and letting our top creative minds make things happen.
+                        <h2>About the internship</h2>
+                        Selected intern's day-to-day responsibilities include:
+                        <ol>
+                            <li>Writing clean, well-designed code</li>
+                            <li>Troubleshooting, testing, and maintaining the core product and databases to ensure
+                                strong
+                                optimization and functionality</li>
+                            <li>Contributing to all phases of the development life cycle</li>
+                            <li>Following industry best practices</li>
+                        </ol>
+                        <h2>Skill(s) required</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Node js</li>
+                        </ul>
+                        Only those candidates can apply who:
+                        <ol>
+                            <li>Can start the internship between 9th Nov'20 and 30th Nov'20</li>
+                            <li>Are available for duration of 6 months</li>
+                            <li>Have relevant skills and interests</li>
+                        </ol>
+
+                    </div>
+
+                    <div class="i2">
+                        <h2>About Us</h2>
+                        We are overly ambitious to introduce to the community smart, creative, well tested
+                        and researched, customer-oriented hardware and software IoT initiatives for efficient and smart
+                        living. We have product development teams with exceptional talents who are capable of
+                        revolutionizing the tech industry with new products and features.
+                        <h2>About the internship</h2>
+                        Selected intern's day-to-day responsibilities include:
+                        <ol>
+
+
+                            <li>Designing and development of Android/Flutter applications.</li>
+                            <li>Troubleshooting, testing, and maintaining the core product and databases to ensure
+                                strong</li>
+                            optimization and functionality
+                            <li>Contributing to all phases of the development life cycle</li>
+                            <li>Following industry best practices</li>
+                        </ol>
+                        <h2>Skill(s) required</h2>
+                        <ul>
+                            <li>Android Studio</li>
+                            <li>Core Java</li>
+                            <li>Flutter</li>
+                        </ul>
+                        Only those candidates can apply who:
+                        <ol>
+                            <li>Only the candidates who are willing to work from the office in Bangalore can apply</li>
+                            <li>Are available for duration of 6 months</li>
+                            <li>Have relevant skills and interests</li>
+                        </ol>
+
+                    </div>
+
+                    <div class="i3">
+                        <h2>About Us</h2>
+                        Brands, agencies & ad tech companies use our platform to discover the most effective audience
+                        for programmatic, social, or TV advertising. If you have seen ads when you visit some websites,
+                        it is likely that we have played a part in deciding if you are indeed the most effective person
+                        for the ad. Founded in 2005 entire product development is
+                        based in Bangalore.
+                        <h2>About the internship</h2>
+                        Selected intern's day-to-day responsibilities include:
+                        <li>Developing modern enterprise-grade web application using Angular *and AngularJS), CSS,
+                            PHP</li>
+                        <li>Testing web applications by writing solid unit test cases and functional test cases
+                            using
+                            frameworks for testing JS applications</li>
+                        <li>Having fun and relishing a sense of intense satisfaction working in a sub-20 person
+                            company
+                            with zero politics, sense of humor and pride in ownership</li>
+                        <h2>Skill(s) required</h2>
+                        <ul>
+                            <li>Angular</li>
+                            <li>SQL</li>
+                            <li>Javascript</li>
+                        </ul>
+                        Only those candidates can apply who:
+                        <ol>
+                            <li>Are available for duration of 6 months</li>
+                            <li>Are from Bangalore</li>
+                            <li>Have relevant skills and interests</li>
+                        </ol>
+
+                    </div>
+                    <label for="uid"> Name</label>
+                    <input type="text" name="uid" id="uid" placeholder="Enter your Name" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Enter E-mail Id" required>
+                    <label for="ilen">Internship Duration</label>
+                    <input type="text" id="ilen" name="ilen" disabled>
+                    <label for="iins">Company Name</label>
+                    <input type="text" id="iins" name="iins" disabled>
+                    <label for="stip">Stipend</label>
+                    <input type="text" id="stip" name="stip" disabled>
+                    <label for="testdate">Select a Test Date:</label>
+                    <input type="radio" name="testdate" id="td" value="22nd October"><b>22<sup>nd</sup>October.</b>
+                    <input type="radio" name="testdate" id="td" value="29th October"><b>29<sup>th</sup>October.</b>
+                    <input type="radio" name="testdate" id="td" value="5th November"><b>5<sup>th</sup>November.</b>
+
+                    <form></form>
+                    <form class="i1">
+                        <label>Rate Yourself for following on Scale of 0-100</label>
+                        <label for="html">HTML:</label>
+                        <input type="number" name="html" min="0" max="100">
+                        <label for="css">CSS:</label>
+                        <input type="number" name="css" min="0" max="100">
+                        <label for="js">Javascript:</label>
+                        <input type="number" name="js" min="0" max="100">
+                        <label for="sql">SQL:</label>
+                        <input type="number" name="sql" min="0" max="100">
+                        <label for="plat">If you have used any framework please mention it here:</label>
+                        <input type="text" name="sql" min="0" max="100">
+                        <label for="cgpa">CGPA:</label>
+                        <input type="number" name="cgpa" min="1" max="4"  step="0.1">
+                        <label for="pe">Past Internship experience(In Months):</label>
+                        <input type="number" name="pe">
+                        <input type="submit" value="Apply" id="submit1" name="submit" onClick="closed(),userAction()">
+                    </form>
+
+                    <form class="i2">
+                        <label>Rate Yourself for following on Scale of 0-100</label>
+                        <label for="and">Android app development:</label>
+                        <input type="number" name="and" min="0" max="100">
+                        <label for="flut">Flutter app development:</label>
+                        <input type="number" name="flut" min="0" max="100">
+                        <label for="java">Core Java:</label>
+                        <input type="number" name="java" min="0" max="100">
+                        <label for="cgpa">CGPA:</label>
+                        <input type="number" name="cgpa" min="1" max="4"  step="0.1">
+                        <label for="pe">Past Internship experience(In Months):</label>
+                        <input type="number" name="pe">
+                        <input type="submit" value="Apply" id="submit2" name="submit" onClick="closed(),userAction()">
+                    </form>
+                    <form class="i3">
+                        <label>Rate Yourself for following on Scale of 0-100</label>
+                        <label for="html">HTML:</label>
+                        <input type="number" name="html" min="0" max="100">
+                        <label for="css">CSS:</label>
+                        <input type="number" name="css" min="0" max="100">
+                        <label for="js">Javascript:</label>
+                        <input type="number" name="js" min="0" max="100">
+                        <label for="sql">SQL:</label>
+                        <input type="number" name="sql" min="0" max="100">
+                        <label for="plat">If you have used any framework please mention it here:</label>
+                        <input type="text" name="sql" min="0" max="100">
+                        <label for="cgpa">CGPA:</label>
+                        <input type="number" name="cgpa" min="1" max="4" step="0.1">
+                        <label for="pe">Past Internship experience(In Months):</label>
+                        <input type="number" name="pe">
+                        <input type="submit" value="Apply" id="submit3" name="submit" onClick="closed(),userAction()">
+                    </form>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var x = document.getElementById("nav");
+        function sc() {
+            x.style.animationPlayState = "running";
+        }
+
+        function load() {
+            var an = document.getElementById("main").style.animationPlayState = "running";
+        }
+
+        x.addEventListener("animationend", function () {
+            document.getElementById("head").style.display = "none";
+            var links = document.getElementsByClassName("navele");
+
+            for (i = 0; i < links.length; i++) {
+                links[i].style.display = "block";
+            }
+        });
+        var info = [{ "pname": "Image Processing", "pimg": "./images/imageprocess.jpg", "instructor": "Prof.ABC", "duration": "2 Months", "appby": "30th October", "certificate": "Yes" }
+            , { "pname": "Artificial Intelligence", "pimg": "https://www.srimax.com/wp-content/uploads/2020/01/Importance-of-Artificial-Intelligence.jpeg", "instructor": "Prof.XYZ", "duration": "2 Months", "appby": "18th October", "certificate": "Yes" }];
+
+
+        var m = document.getElementById("main");
+
+        if (info.length != 0) {
+
+            var prohead = document.createElement("h2");
+            prohead.id = "prohead";
+            var htext = document.createTextNode("On Campus Projetcs");
+            prohead.style.backgroundColor = "orange";
+            prohead.style.color = "white";
+            prohead.style.textAlign = "center";
+            prohead.style.padding = "10px";
+            prohead.style.margin = "5px";
+            prohead.style.fontWeight = "bold";
+            prohead.appendChild(htext);
+            m.appendChild(prohead);
+
+            for (var i = 0; i < info.length; i++) {
+                var ndiv = document.createElement("div");
+                var nimg = document.createElement("img");
+                nimg.src = info[i].pimg;
+                nimg.style = ".container>img";
+                nimg.style.float = "right";
+                ndiv.appendChild(nimg);
+                ndiv.style.padding = "10px";
+                ndiv.className = "container";
+                ndiv.style.width = "97.5%";
+                var phead = document.createElement("h1");
+                var pnam = document.createTextNode(info[i].pname);
+                phead.appendChild(pnam);
+                ndiv.appendChild(phead);
+
+                var ins = document.createElement("h2");
+                ins.innerHTML += info[i].instructor;
+                ndiv.appendChild(ins);
+                ndiv.innerHTML += "<span><i class='fa fa-calendar fa-2x' aria-hidden='true'></i> Duration</span>";
+                ndiv.innerHTML += "<span><i class='fa fa-certificate fa-2x' aria-hidden='true'></i> Certificate</span>";
+                ndiv.innerHTML += "<span><i class='fa fa-clock-o fa-2x' aria-hidden='true'></i> Apply By</span><br>";
+
+                ndiv.innerHTML += "<span class='in-info' >" + info[i].duration + "</span>";
+                ndiv.innerHTML += "<span class='in-info' style='padding:35px'>" + info[i].certificate + "</span>";
+                ndiv.innerHTML += "<span class='in-info'>" + info[i].appby + "</span>";
+
+                var nbutton = document.createElement("button");
+                var btn = document.createTextNode("More Info");
+                nbutton.appendChild(btn);
+                nbutton.style.position = "relative";
+                nbutton.style.top = "50px";
+                nbutton.style.left = "-500px";
+                ndiv.appendChild(nbutton);
+                m.appendChild(ndiv);
+            }
+
+        }
+
+
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        var i1 = document.getElementsByClassName("i1");
+        var i2 = document.getElementsByClassName("i2");
+        var i3 = document.getElementsByClassName("i3");
+        var ilen;
+        var iins;
+        var iname;
+        var stipend;
+        var appby;
+        var radio;
+
+        for(i=0;i<i1.length;i++){
+            console.log(i1[i]);
+        }
+
+        function apply(id) {
+            var y = new Array();
+            if (id == "intern1") {
+                for (var i = 0; i < i1.length; i++) {
+                    i1[i].style.display = "block";
+                    i2[i].style.display = "none";
+                    i3[i].style.display = "none";
+                }
+
+            }
+            if (id == "intern2") {
+                for (var i = 0; i < i2.length; i++) {
+                    i2[i].style.display = "block";
+                    i1[i].style.display = "none";
+                    i3[i].style.display = "none";
+                }
+            }
+            if (id == "intern3") {
+                for (var i = 0; i < i3.length; i++) {
+                    i3[i].style.display = "block";
+                    i2[i].style.display = "none";
+                    i1[i].style.display = "none";
+                }
+            }
+            modal.style.display = "block";
+            var z = document.getElementById(id);
+
+
+            for (var i = 0; i < z.childNodes.length; i++) {
+                if (z.childNodes[i].className === "in-info") {
+                    y.push(z.childNodes[i]);
+                }
+
+                if (z.childNodes[i].className === "iins") {
+                    iins = z.childNodes[i].innerHTML;
+                }
+
+
+                if (z.childNodes[i].className === "iname") {
+                    iname = z.childNodes[i].innerHTML;
+                }
+            }
+            
+            ilen = y[0].innerHTML;
+            stipend = y[1].innerHTML;
+            appby = y[2].innerHTML;
+            document.getElementById("ilen").value = ilen;
+            document.getElementById("iins").value = iins;
+            document.getElementById("iname").innerHTML = iname;
+            document.getElementById("stip").value = stipend;
+        }
+       
+       
+        const userAction = async () => {
+            
+            var ele = document.getElementsByName("testdate"); 
+              
+              for(i = 0; i < ele.length; i++) { 
+                  if(ele[i].checked){
+                    radio=ele[i].value; 
+                    console.log(ele[i].value,radio);
+                  } 
+                      
+              } 
+
+              if (iins == "AK Technologies"){
+                  debugger;
+                myBody = {
+                iins: iins, iname: iname, ino: 1, name: document.getElementById("uid").value, email: document.getElementById("email").value, test_date: radio,
+                experience: document.getElementsByName("pe")[0].value, html: document.getElementsByName("html")[0].value, css: document.getElementsByName("css")[0].value, 
+                javascript: document.getElementsByName("js")[0].value, sql: document.getElementsByName("sql")[0].value,cgpa:document.getElementsByName("cgpa")[0].value
+            };
+              }
+
+              else if(iins == "Hindel Solutions"){
+                myBody = {
+                iins: iins, iname: iname, ino: 2, name: document.getElementById("uid").value, email: document.getElementById("email").value, test_date: radio,
+                experience: document.getElementsByName("pe")[1].value, android: document.getElementsByName("and")[0].value, flutter: document.getElementsByName("flut")[0].value, 
+                java: document.getElementsByName("java")[0].value,cgpa:document.getElementsByName("cgpa")[1].value
+            };
+              }
+
+              else{
+                myBody = {
+                iins: iins, iname: iname, ino: 3, name: document.getElementById("uid").value, email: document.getElementById("email").value, test_date: radio,
+                experience: document.getElementsByName("pe")[2].value, html: document.getElementsByName("html")[1].value, css: document.getElementsByName("css")[1].value, 
+                javascript: document.getElementsByName("js")[1].value, sql: document.getElementsByName("sql")[1].value,cgpa:document.getElementsByName("cgpa")[2].value
+            };
+              }
+         
+            fetch('http://localhost:3001/api/internships/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                //console.log(data);
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var mode;
+        var user;
+        function checkCookie() {
+            mode = getCookie("mode");
+            user = getCookie("user");
+            if (mode != "") {
+                mode = mode;
+            } else {
+                mode = "lightmode";
+                setCookie("mode", mode, 365);
+            }
+
+            if (user == "christ") {
+                var sbuttons = document.getElementsByClassName("student");
+                var tbuttons = document.getElementsByClassName("teach");
+                console.log(user);
+                for (var i = 0; i < tbuttons.length; i++) {
+                    sbuttons[i].style.display = "none";
+                    tbuttons[i].style.display = "block";
+
+                    tbuttons[i].addEventListener("click", function () {
+                        window.location = "project_list.html";
+                    });
+                }
+            }
+            console.log(user);
+            setMode();
+        }
+        
+        const onloadAction = async () => {
+            myBody = {username:user};
+            fetch('http://localhost:3001/api/internshipscheck/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                ze = data.message;
+                for(var i=0;i<ze.length;i++){
+                    document.getElementsByName("subbut")[ze[i]].style.display = "none";
+                }
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        function closed() {
+            event.preventDefault();
+            modal.style.display = "none";
+        }
+        
+
+        document.getElementById("toggle").addEventListener("click", function () {
+            setMode();
+
+        });
+        function setMode() {
+
+            var modbt = document.getElementById("toggle");
+            var buttons = document.getElementsByTagName("button");
+            var containers = document.getElementsByClassName("container");
+            var imgs = document.getElementsByTagName("img");
+
+            if (mode == "darkmode") {
+
+                document.getElementById("main").style.backgroundColor = "grey";
+                mode = "lightmode";
+                setCookie("mode", "darkmode", 365);
+                modbt.innerHTML = "Light Mode";
+
+                x.style.backgroundColor = "black";
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].style.backgroundColor = "black";
+                }
+                for (var i = 0; i < containers.length; i++) {
+                    containers[i].style.boxShadow = "2px 2px 2px 1px white";
+                }
+
+                modbt.style.backgroundColor = "blue";
+                prohead.style.backgroundColor = "black";
+
+            }
+
+            else {
+
+                document.getElementById("main").style.backgroundColor = "white";
+                mode = "darkmode";
+                setCookie("mode", "lightmode", 365);
+                modbt.innerHTML = "Dark Mode";
+
+                x.style.backgroundColor = "orange";
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].style.backgroundColor = "orange";
+                }
+                modbt.style.backgroundColor = "black";
+                prohead.style.backgroundColor = "orange";
+
+
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skill Management Webapp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="main" onload="checkCookie()">
+    <div id="nav">
+        <a href="#" class="nav-link" id="link1" onClick="active(this.id)">Home</a>
+        <a href="project_stdreg.html" class="nav-link" id="link2" onClick="active(this.id)">Event-Registration</a>
+        <a href="project_ackskills.html" class="nav-link" id="link3" class="nav-link" onClick="active(this.id)">Acquire
+            Skills</a>
+        <a href="project_indsconn.html" class="nav-link" id="link4" onClick="active(this.id)">Industry Connect</a>
+        <a href="project_indsconn.html#prohead" class="nav-link" id="link5" onClick="active(this.id)">On Campus
+            projects</a>
+        <div id="nav-aside">
+            <a href="#" style="float: right;" class="nav-link " id="link6" onClick="active(this.id)">Sign
+                Up<i class="fa fa-user-plus" aria-hidden="true"></i></a>
+            <a href="#" style="float: right;" class="nav-link" id="link7" onClick="active(this.id)">Login <i
+                    class="fa fa-sign-in" aria-hidden="true"></i></a>
+        </div>
+        <div id="show">
+            <a onclick="logout()"><i class="fa fa-sign-out" aria-hidden="true">Log Out</i></a>
+            <span id="suser"></span>
+        </div>
+
+    </div>
+
+    <div id="slideshow">
+        <div id="firstslide">Welcome to Skill Jar<br>
+            <div id="fq">
+                <span class="quotes">“</span>Live as if you were to die tomorrow. Learn as if you were to live forever.
+                <span class="quotes">” <br>― Mahatma Gandhi</span>
+            </div>
+        </div>
+
+        <img id="slides">
+        <div id="caption"></div>
+    </div>
+    <div id="Sidenav" class="sidenav">
+        <button id="toggle">Dark Mode</button>
+
+    </div>
+
+
+    <div id="student-reg">
+        <div class="sidete">
+            <h2>For the Students and By the students...</h2>
+            <p>
+                This is a website under the University program "Bridging the gap between students and industries"
+                and it helps the students to get along with industry know-how and take up courses(guided and unguided)
+                to upgrade their skills. University alumni palced in different industries are invited for guest
+                lectures.
+            </p>
+            <button id="page2">Register</button>
+        </div>
+
+        <div class="sideth">
+            <span class="quotesr">“</span><span class="actquote">This program plays a vital role in helping the students
+                to gain
+                insights on working within the Industry.</span><span class="quotesr">” <br></span>- Faculty
+        </div>
+    </div>
+
+    <div id="acq-skills">
+        <div class="sidete" style="float: right;">
+            <h2>Acquire Skills</h2>
+            <p>
+                The Students can take up courses and gain knowledge oustside the span of courses offered by the
+                university. The courses are either guided or unguided.
+                In case of guided courses, each course is guided by a university faculty or industry personnel, which
+                also helps the students gain practical perpective also.
+            </p>
+            <button id="page3">Enroll</button>
+        </div>
+
+        <div class="sideth" style="float: left;" id="side-acq">
+            <h3 class="show-courses" id="chead">Courses offered:</h3>
+            <img class="show-courses" id="cimg">
+            <span class="quotesr" id="hide1">“</span><span class="actquote" id="hide2">The important thing is not to
+                stop questioning; curiosity has its own reason for existing.
+
+            </span><span class="quotesr" id="hide3">” <br></span><b id="hide4"> – Albert Einstein</b>
+        </div>
+    </div>
+
+    <div id="inds-conn">
+        <div class="sidete">
+            <h2>Industry Connect</h2>
+            <p>
+                This is a collabrative program between university and various industries. Under this program students
+                can work on projects or
+                problems faced by the industries and the students also have oppurtunity to earn internship depending on
+                their work.
+            </p>
+            <button id="page4">Know More</button>
+        </div>
+
+        <div class="sideth">
+
+            <span class="quotesr">“</span><span class="actquote">Tell me and I forget, teach me and I may
+                remember,involve me and I learn.
+            </span><span class="quotesr">” <br></span> – Benjamin Franklin
+        </div>
+    </div>
+
+    <div id="resass">
+        <div class="sidete" style="float: right;">
+            <h2>On Campus Projetcs</h2>
+            <p>
+                It enables a student to take up projetcs on work on them along with regular studies.
+            </p>
+            <button id="page5">Find</button>
+        </div>
+
+        <div class="sideth" style="float: left;">
+
+            <span class="quotesr">“</span><span class="actquote">An Investment in knowledge pays the best interest
+            </span><span class="quotesr">” <br></span> -Benjamin Franklin
+        </div>
+    </div>
+    <div id="footer">
+        <ul id="cdetails">
+            <h3>Web Development Center</h3>
+            <li>Christ Uiversity<br>Kengeri,Bengaluru<br>Karnataka,India</li>
+            <li>Tel:+91 9999999999</li>
+            <li>Email: kesariasachin@gmail.com</li>
+
+        </ul>
+        <div id="cus">
+            <h3>Contact Us at:</h3>
+            <i class="fa fa-facebook-official fa-4x" aria-hidden="true" id="c1"></i>
+            <i class="fa fa-instagram fa-4x" aria-hidden="true" id="c2"></i>
+            <i class="fa fa-twitter fa-4x" aria-hidden="true" id="c3"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="form">
+                <h1>Sign Up</h1>
+                <hr>
+                <form>
+                    <label for="uid">User Name</label>
+                    <input type="text" name="uid" id="uid" placeholder="Enter User Name" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Enter E-mail Id" required>
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass" minlength="8" placeholder="Enter Password" required>
+                    <label for="cpass">Confirm Password</label>
+                    <input type="password" name="cpass" id="cpass" minlength="8" placeholder="Confirm the Password"
+                        required>
+                    <input type="submit" value="Submit" id="submit1" name="submit" onclick="show(),userAction()">
+                </form>
+            </div>
+
+            <div id="form2">
+                <h1>Login In</h1>
+                <hr>
+                <form>
+                    <label for="luid">User Name</label>
+                    <input type="text" name="luid" id="luid" placeholder="Enter User Name" required>
+                    <label for="lpass">Password</label>
+                    <input type="password" name="lpass" id="lpass" minlength="8" placeholder="Enter Password" required>
+                    <input type="submit" value="Submit" id="lsubmit" name="submit"
+                        onclick="event.preventDefault(),userAction2()">
+                    <p id="check">Please check your credentials</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+
+
+        const userAction = async () => {
+            myBody = { username: document.getElementById("uid").value, email: document.getElementById("email").value, password: document.getElementById("pass").value };
+            fetch('http://localhost:3001/api/savedata/', { 
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Methods": "DELETE, POST, GET, OPTIONS",
+                    "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                    if(data.statuscode == 400){
+                        alert(data.message);
+                    }
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+
+        const userAction2 = async () => {
+            myBody = { username: document.getElementById("luid").value, password: document.getElementById("lpass").value };
+            fetch('http://localhost:3001/api/login/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                if (data.statuscode == 401) {
+                    document.getElementById("check").style.display = "block";
+                }
+
+                else {
+                    ushow();
+                }
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+        document.getElementById("page2").addEventListener("click", function () {
+            window.location = "project_stdreg.html";
+
+        });
+
+
+        document.getElementById("page3").addEventListener("click", function () {
+            window.location = "project_ackskills.html";
+        });
+
+        document.getElementById("page4").addEventListener("click", function () {
+            window.location = "project_indsconn.html";
+        });
+
+        document.getElementById("page5").addEventListener("click", function () {
+            window.location = "project_indsconn.html#prohead";
+        });
+
+
+        var modal = document.getElementById("myModal");
+        var sg = document.getElementById("link6");
+        var lo = document.getElementById("link7");
+        var span = document.getElementsByClassName("close")[0];
+
+        sg.onclick = function () {
+            modal.style.display = "block";
+            document.getElementById("form2").style.display = "none";
+            document.getElementById("form").style.display = "block";
+        }
+
+        lo.onclick = function () {
+            modal.style.display = "block";
+            document.getElementById("form").style.display = "none";
+            document.getElementById("form2").style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                // modal.style.display = "none";
+            }
+        }
+        function logout() {
+            setCookie("user", x, 0);
+            document.getElementById("show").style.display = "none";
+            document.getElementById("nav-aside").style.display = "block";
+        }
+        function show() {
+            event.preventDefault();
+            modal.style.display = "none";
+        }
+
+        function ushow() {
+            modal.style.display = "none";
+            var x = document.getElementById("luid").value;
+            document.getElementById("nav-aside").style.display = "none";
+            document.getElementById("show").style.display = "block";
+            document.getElementById("suser").innerHTML = x;
+            setCookie("user", x, 1);
+        }
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var mode;
+        function checkCookie() {
+            mode = getCookie("mode");
+            user = getCookie("user");
+            if (mode != "") {
+                mode = mode;
+            } else {
+                mode = "lightmode";
+                setCookie("mode", mode, 365);
+            }
+            if (user != "") {
+                document.getElementById("show").style.display = "block";
+                document.getElementById("nav-aside").style.display = "none";
+                document.getElementById("suser").innerHTML = user;
+            }
+            else {
+                document.getElementById("show").style.display = "none";
+                document.getElementById("nav-aside").style.display = "block";
+            }
+            setMode();
+        }
+
+
+        var links = document.getElementsByClassName("active");
+        function active(id) {
+            for (var i = 0; i < links.length; i++) {
+                links[i].className = "nav-link";
+
+            }
+            document.getElementById(id).className = "active";
+        }
+
+        var x = document.getElementById("slides");
+        var i = 0;
+        var arr = ["https://cdn.goskills.com/blobs/blogs/79/6.png", "./images/intern.jpg", "https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60", "https://images.unsplash.com/photo-1549637642-90187f64f420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80"];
+        var caps = ["Upgrade Yours Skills", "Internships", "Industry-Oriented projects", "Industry Connect"];
+        setInterval(function slideshow() {
+            document.getElementById("firstslide").style.display = "none";
+            caption = document.getElementById("caption");
+            caption.style.display = "inline-block";
+            x.src = arr[i];
+            caption.innerHTML = caps[i];
+            x.animate([
+                {
+                    opacity: 0.4
+                },
+                {
+                    opacity: 1
+                }
+            ], {
+                duration: 1500,
+            });
+
+            caption.animate([
+                {
+                    opacity: 0.4
+                },
+                {
+                    opacity: 1
+                }
+            ], {
+                duration: 1500,
+            });
+            i += 1;
+            if (i > arr.length - 1) {
+                i = 0;
+            }
+        }, 3000);
+
+
+        var j = 0;
+        var cour = ["https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRVRm6ba-XkvClBwYmsZA-mjO2yBL0GFXrQg&usqp=CAU", "https://specials-images.forbesimg.com/imageserve/5eb5db1ce141140006a7b4c9/960x0.jpg?cropX1=0&cropX2=7478&cropY1=469&cropY2=3395", "https://venturebeat.com/wp-content/uploads/2019/02/google-flutter-logo-white.png?w=1536&strip=all", "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSckZrtXcehtf8GlZ8WwVoo-wJPN0Yjw8hvYw&usqp=CAU"];
+
+
+        setInterval(function show() {
+            var z = document.getElementById("cimg");
+            var y = document.getElementById("chead")
+
+            if (j < 4) {
+                document.getElementById("hide1").style.display = "none";
+                document.getElementById("hide2").style.display = "none";
+                document.getElementById("hide3").style.display = "none";
+                document.getElementById("hide4").style.display = "none";
+                y.style.display = "block";
+                z.style.display = "block";
+            }
+
+            if (j > 3) {
+                document.getElementById("hide1").style.display = "inline";
+                document.getElementById("hide2").style.display = "inline";
+                document.getElementById("hide3").style.display = "inline";
+                document.getElementById("hide4").style.display = "inline";
+                z.style.display = "none";
+                y.style.display = "none";
+                j = 0;
+            }
+            z.src = cour[j];
+            z.animate([
+                {
+                    opacity: 0.4
+                },
+                {
+                    opacity: 1
+                }
+            ], {
+                duration: 1500,
+            });
+
+            j += 1;
+
+        }, 2000);
+
+
+        document.getElementById("toggle").addEventListener("click", function () {
+            setMode();
+
+        });
+        function setMode() {
+            var nav = document.getElementById("nav");
+            var std = document.getElementById("student-reg");
+            var acq = document.getElementById("acq-skills");
+            var inds = document.getElementById("inds-conn");
+            var assit = document.getElementById("resass");
+            var modbt = document.getElementById("toggle");
+            var foot = document.getElementById("footer");
+
+            if (mode == "darkmode") {
+
+                document.getElementById("main").style.backgroundColor = "grey";
+                nav.style.backgroundColor = "black";
+                nav.style.zIndex = "10";
+                std.style.backgroundColor = "black";
+                std.style.zIndex = "10";
+                std.style.boxShadow = "4px 4px 4px 1px white";
+                acq.style.backgroundColor = "black";
+                acq.style.zIndex = "10";
+                acq.style.boxShadow = "4px 4px 4px 1px white";
+                inds.style.backgroundColor = "black";
+                inds.style.zIndex = "10";
+                inds.style.boxShadow = "4px 4px 4px 1px white";
+                assit.style.backgroundColor = "black";
+                assit.style.zIndex = "10";
+                assit.style.boxShadow = "4px 4px 4px 1px white";
+                foot.style.color = "white";
+                mode = "lightmode";
+                setCookie("mode", "darkmode", 365);
+                modbt.innerHTML = "Light Mode";
+                modbt.style.backgroundColor = "blue"
+
+            }
+
+            else {
+
+                document.getElementById("main").style.backgroundColor = "white";
+                nav.style.backgroundColor = "rgb(28, 161, 179)";
+                nav.style.zIndex = "0";
+                std.style.backgroundColor = "rgb(28, 161, 179)";
+                std.style.zIndex = "0";
+                acq.style.backgroundColor = "rgb(28, 161, 179)";
+                acq.style.zIndex = "0";
+                inds.style.backgroundColor = "rgb(28, 161, 179)";
+                inds.style.zIndex = "0";
+                assit.style.backgroundColor = "rgb(28, 161, 179)";
+                assit.style.zIndex = "0";
+                foot.style.color = "black";
+                mode = "darkmode";
+                setCookie("mode", "lightmode", 365);
+                modbt.innerHTML = "Dark Mode";
+                modbt.style.backgroundColor = "black"
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

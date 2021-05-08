@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Acquire Skills</title>
+    <link rel="stylesheet" href="project_ackskills.css">
+</head>
+
+<body onload="load(),checkCookie(),onloadAction()">
+
+    <div id="appear">
+        <p>Acquire <br>Skills</p>
+    </div>
+    <div id="main">
+        <div id="nav">
+            <a href="index.html" class="nav-link" id="link1" onClick="active(this.id)">Home</a>
+            <a href="#">Acquire Skills</a>
+
+        </div>
+        <div class="container">
+            <div class="course-img">
+                <img src="https://img-b.udemycdn.com/course/480x270/629302_8a2d_2.jpg?secure=pvsSgGSWpIqeR504o-QpEA%3D%3D%2C1601804369"
+                    alt="python">
+            </div>
+
+            <div class="course-info" id="c1">
+                <h2 class="cname">Python Programming Masterclass</h2>
+                <p>Go from zero to master level in python</p>
+                <p class="clen">58 Hours. 45 Lectures</p>
+                <p class="cins">Instructors: Prof.ABC,Dr.XYZ</p>
+                <button onclick="enroll(this.parentElement.id,this.id)" id="b1" class="enroll">Enroll Now</button>
+            </div>
+
+            <div class="dropdown">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Have a fundamental understanding of the Python programming language.</li>
+                    <li>Have the skills and understanding of Python to confidently apply for Python programming jobs.
+                    </li>
+                    <li>Acquire the pre-requisite Python skills to move into specific branches - Machine Learning, Data
+                        Science, etc..</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div id="Sidenav" class="sidenav">
+            <button id="toggle">Dark Mode</button>
+
+        </div>
+        <div class="container">
+            <div class="course-img">
+                <img src="https://img-b.udemycdn.com/course/480x270/1219332_bdd7.jpg?secure=2XXYzrzCSbngk6a7pIBcaQ%3D%3D%2C1601827674"
+                    alt="python">
+            </div>
+
+            <div class="course-info" id="c2">
+                <h2 class="cname">AI:Learn how to build an AI</h2>
+                <p>Combine the power of Machine Learning and Deep Learning to create AI for real world
+                    applications</p>
+                <p class="clen">16.5 Hours. 20 Lectures</p>
+                <p class="cins">Instructors: Prof.FSD</p>
+                <button onclick="enroll(this.parentElement.id,this.id)" id="b2" class="enroll">Enroll Now</button>
+            </div>
+
+            <div class="dropdown">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Build various deep learning agents (including DQN and A3C)</li>
+                    <li>Understand the theory behind Artificial Intelligence</li>
+                    <li>Make a virtual Self Driving Car</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="course-img">
+                <img src="https://img-b.udemycdn.com/course/480x270/3498230_d483.jpg?secure=lxLvBBfONZqC9iiXf0m_OA%3D%3D%2C1601799610"
+                    alt="python">
+            </div>
+
+            <div class="course-info" id="c3">
+                <h2 class="cname">ML Fundamentals Using Tensorflow</h2>
+                <p>Running ML algorithms using TensorFlow with Colaboratory</p>
+                <p class="clen">20 Hours. 40 Lectures</p>
+                <p class="cins">Instructors: Prof.RD</p>
+                <button onclick="enroll(this.parentElement.id,this.id)" id="b3" class="enroll">Enroll Now</button>
+            </div>
+
+            <div class="dropdown">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Introduction to TensorFlow</li>
+                    <li>Introduction to Google Colaboratory (Colab)</li>
+                    <li>Classification and Regression Mechanism</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="course-img">
+                <img src=" https://img-b.udemycdn.com/course/480x270/1632804_aa69_4.jpg?secure=4ndMzMvBr9RECMCHPwvxjg%3D%3D%2C1601817753"
+                    alt="python">
+            </div>
+
+            <div class="course-info" id="c4">
+                <h2 class="cname">Flutter</h2>
+                <p>Learn Flutter Programming</p>
+                <p class="clen">12 Hours. 12 Lectures</p>
+                <p class="cins">Instructors: Prof.ABD</p>
+                <button onclick="enroll(this.parentElement.id,this.id)" id="b4" class="enroll">Enroll Now</button>
+            </div>
+
+            <div class="dropdown">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Build a complete, real-world app with Flutter & Firebase</li>
+                    <li>Write iOS & Android apps with a single codebase</li>
+                    <li>Write production-ready code following best practices and become a competent Flutter developer
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="course-img">
+                <img src="https://img-b.udemycdn.com/course/480x270/953976_4018_13.jpg?secure=9LOyGULfTqRk0JbikEccDw%3D%3D%2C1601876098"
+                    alt="python">
+            </div>
+
+            <div class="course-info" id="c5">
+                <h2 class="cname">Android App development with kotlin</h2>
+                <p>Learn Kotlin Android App development</p>
+                <p class="clen">30 Hours. 45 Lectures</p>
+                <p class="cins">Instructors: Prof.Robert</p>
+                <button onclick="enroll(this.parentElement.id,this.id)" id="b5" class="enroll">Enroll Now</button>
+            </div>
+
+            <div class="dropdown">
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Learn the core Android app development and Kotlin skills to build real Android apps.</li>
+                    <li>Learn how to target current and older versions of Android when writing your apps.</li>
+                    <li>Understand how to create Android apps using Kotlin.</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="course-img">
+                <img src="https://img-b.udemycdn.com/course/480x270/2209442_afe5_3.jpg?secure=0zuz7tnsEGqN5vZG12ZnRw%3D%3D%2C1601871122"
+                    alt="python">
+            </div>
+
+            <div class="course-info" id="c6">
+                <h2 class="cname">Complete Vue JS Developer Course</h2>
+                <p>Build your own webapps using Vue js</p>
+                <p class="clen">50 Hours. 65 Lectures</p>
+                <p class="cins">Instructors: Prof.Bob</p>
+                <button onclick="enroll(this.parentElement.id,this.id)" id="b6">Enroll Now</button>
+            </div>
+
+            <div class="dropdown" style="position: absolute;top: -120px;left: 300px;">
+
+                <h3>What You'll Learn</h3>
+                <ul>
+                    <li>Web-Development.</li>
+                    <li>Create front-end apps using Vue</li>
+                    <li>Complete mastery in Vue</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="form">
+                    <h1 id="cname"></h1>
+                    <hr>
+                    <form>
+                        <label for="uid"> Name</label>
+                        <input type="text" name="uid" id="uid" placeholder="Enter your Name" required>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Enter E-mail Id" required>
+                        <label for="clen">Course Length</label>
+                        <input type="text" id="clen" name="clen" disabled>
+                        <label for="cins">Course Instructor(s)</label>
+                        <input type="text" id="cins" name="cins" disabled>
+                        <p style="color: red;font-weight: bold;margin: 10px;font-size: large;">This Course needs to be
+                            completed before end of current Semester</p>
+                        <input type="submit" value="Enroll" id="submit" name="submit" onclick="sub(),userAction()">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        
+        function load() {
+            
+            var an = document.getElementById("appear").style.animationPlayState = "running";
+        }
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        var rem;
+        var remc;
+        var clen;
+        var cins;
+        var cname;
+        function enroll(id, b) {
+            modal.style.display = "block";
+            var x = document.getElementById(id);
+
+            for (var i = 0; i < x.childNodes.length; i++) {
+                if (x.childNodes[i].className === "clen") {
+                    clen = x.childNodes[i].innerHTML;
+                }
+
+                if (x.childNodes[i].className === "cins") {
+                    cins = x.childNodes[i].innerHTML;
+                }
+
+                if (x.childNodes[i].className === "cname") {
+                    cname = x.childNodes[i].innerHTML;
+                }
+            }
+            document.getElementById("clen").value = clen;
+            document.getElementById("cins").value = cins;
+            document.getElementById("cname").innerHTML = cname;
+            rem = x;
+            remc = b;
+        }
+
+        const userAction = async () => {
+            myBody = { cname: cname, name: document.getElementById("uid").value, email: document.getElementById("email").value };
+            fetch('http://localhost:3001/api/courseregistration/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                //console.log(data);
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+
+
+        const onloadAction = async () => {
+        
+            myBody = { username:user};
+            fetch('http://localhost:3001/api/courseregistrationcheck/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                var ze = data.message;
+                for(var i=0;i<ze.length;i++){
+                    document.getElementsByClassName("enroll")[ze[i]].style.display = "none";
+                }
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function sub() {
+            event.preventDefault();
+            modal.style.display = "none";
+            document.getElementById(remc).style.display = "none";
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        var mode;
+        var user;
+        function checkCookie() {
+            mode = getCookie("mode");
+            user = getCookie("user");
+            if (mode != "") {
+                mode = mode;
+            } else {
+                mode = "lightmode";
+                setCookie("mode", mode, 365);
+            }
+            console.log(mode);
+            setMode();
+        }
+
+
+        document.getElementById("toggle").addEventListener("click", function () {
+            setMode();
+
+        });
+
+
+        function setMode() {
+            var containers = document.getElementsByClassName("container");
+            var dropdowns = document.getElementsByClassName("dropdown");
+            var modbt = document.getElementById("toggle");
+
+
+            if (mode == "darkmode") {
+
+                document.getElementsByTagName("body")[0].style.backgroundColor = "grey";
+                nav.style.backgroundColor = "black";
+                for (var i = 0; i < containers.length; i++) {
+                    dropdowns[i].style.zIndex = "3";
+                    containers[i].style.backgroundColor = "black";
+
+                }
+
+                modal.style.zIndex = "3";
+                mode = "lightmode";
+                setCookie("mode", "darkmode", 365);
+                modbt.innerHTML = "Light Mode";
+                modbt.style.backgroundColor = "blue"
+
+            }
+
+            else {
+
+                document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+                nav.style.backgroundColor = "rgb(238, 91, 91)";
+                for (var i = 0; i < containers.length; ++i) {
+                    dropdowns[i].style.zIndex = "1";
+                    containers[i].style.backgroundColor = " rgb(28, 161, 179)";
+
+                }
+                modal.style.zIndex = "1";
+                mode = "darkmode";
+                setCookie("mode", "lightmode", 365);
+                modbt.innerHTML = "Dark Mode";
+                modbt.style.backgroundColor = "black"
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

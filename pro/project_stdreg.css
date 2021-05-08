@@ -1,0 +1,236 @@
+#nav {
+    /* background-color: rgb(231, 231, 231); */
+    background-color: rgb(255, 168, 7);
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+#nav>a {
+    display: block;
+    color: white;
+    float: left;
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    text-decoration: none;
+    padding: 20px;
+    font-style: italic;
+
+}
+
+#nav>a:hover {
+    /* background-color: lightsalmon; */
+    background-color: rgb(141, 120, 219);
+}
+
+
+#form-main {
+    width: 43%;
+    height: auto;
+    margin-left: 28.5%;
+    background-color: rgb(141, 120, 219);
+    border: 3px solid black;
+}
+
+#form-header {
+    padding: 5px;
+    height: 30%;
+    background-color: rgb(141, 120, 219);
+}
+
+#info {
+    width: 90%;
+    margin: auto;
+    padding: 16px;
+    background-color: orange;
+
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    display: block;
+    width: 80%;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 10px;
+}
+
+input[type=submit] {
+    position: relative;
+    left: 40%;
+    margin: 20px;
+    display: block;
+    width: 80px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(141, 120, 219);
+}
+
+label {
+    display: block;
+    font-weight: bolder;
+    color: white;
+    margin: 10px;
+    font-size: large;
+}
+
+input[type="checkbox"] {
+    display: inline;
+}
+
+span {
+    font-weight: bolder;
+    color: white;
+    margin: 10px;
+    font-size: large;
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(255, 168, 7);
+    color: white;
+    font-weight: bolder;
+}
+
+#form-header>img {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 15px;
+    width: 95%;
+    height: 80%;
+}
+
+#lside {
+    float: left;
+    position: relative;
+    width: 25%;
+    margin-left: 10px;
+    height: 1040px;
+    background-color: rgb(30, 162, 202);
+    color: white;
+}
+
+#rside {
+    position: absolute;
+    float: right;
+    width: 25%;
+    top: 86px;
+    margin-left: 74%;
+    height: 1040px;
+    background-color: rgb(30, 162, 202);
+}
+
+#lside>img {
+    width: 93%;
+    height: 40%;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 55px;
+
+}
+
+#rside>img {
+    width: 93%;
+    height: 40%;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 55px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: lightsalmon;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: rgb(245, 100, 43);
+}
+
+
+#Sidenav button {
+    position: absolute;
+    left: -110px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    height: 80px;
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    background-color: black;
+}
+
+#Sidenav button:hover {
+    left: 0;
+
+}
+
+@keyframes load {
+    from {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#main {
+    animation-name: load;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    position: relative;
+    animation-iteration-count: 1;
+}
+
+@media only screen and (max-width: 700px) {
+    #lside {
+        width: 90%;
+        margin: 5%;
+        height: 100%;
+        float: none;
+        position: unset;
+    }
+
+    #form-main {
+        width: 90%;
+        margin: 5%;
+        left: 0%;
+        height: 100%;
+        position: unset;
+    }
+
+    #rside {
+        width: 90%;
+        margin: 5%;
+        height: 100%;
+        float: none;
+        position: unset;
+    }
+
+    #Sidenav button {
+        left: -88px;
+        max-width: 30%;
+        max-height: 30px;
+    }
+
+}

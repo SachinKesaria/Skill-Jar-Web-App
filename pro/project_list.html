@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Applications List</title>
+    <link rel="stylesheet" href="project_list.css">
+</head>
+
+<body onload="onloadAction(),disp2()">
+    <h1>Full Stack Development Internship - AK Technologies</h1>
+    <div>
+        <table id="t1" cellpadding="10px" cellspacing="15px">
+            <tr class="r1">
+                <th id="name" class="dropdown">Student Name</th>
+                <th id="email" class="dropdown">Email id</th>
+                <th id="cgpa" class="dropdown">CGPA</th>
+                <th id="pe" class="dropdown">Past Experience</th>
+            </tr>
+        </table>
+
+        <div class="dropdown-content"></div>
+    </div>
+
+    <h1>Mobile App Development Internship - Hindel Solutions</h1>
+    <div>
+        <table id="t2" cellpadding="10px" cellspacing="15px">
+            <tr class="r1">
+                <th id="name2" class="dropdown">Student Name</th>
+                <th id="email2" class="dropdown">Email id</th>
+                <th id="cgpa2" class="dropdown">CGPA</th>
+                <th id="pe2" class="dropdown">Past Experience</th>
+            </tr>
+        </table>
+
+
+        <div class="dropdown-content"></div>
+
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        var arr = [];
+        var karr = [];
+        const onloadAction = async () => {
+            myBody = { username: "abc" };
+            fetch('http://localhost:3001/api/internshipsdisplay/', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(myBody),
+            }).then(response => response.json()).then(data => {
+                arr = data.message;
+                karr = data.message2;
+                disp();
+                disp2();
+
+            }).catch((error) => {
+                console.log(error);
+            });
+
+        }
+        google.charts.load('current', {
+            callback: drawChart,
+            packages: ['corechart']
+        });
+        // google.charts.setOnLoadCallback(drawChart);
+
+        var msorted = false;
+        var nsorted = false;
+        var esorted = false;
+        var msorted2 = false;
+        var nsorted2 = false;
+        var esorted2 = false;
+
+        // var arr = [{ "name": "ABC", "email": "abc@gmail.com", "address": "Banglore", "CGPA": "3.9", "pe": 6, "skills": { "html": 60, "css": 80, "js": 90 } }
+        //     , { "name": "PQR", "email": "pqr@gmail.com", "address": "Banglore", "CGPA": "3.67", "pe": 2, "skills": { "html": 80, "css": 70, "js": 60 } }
+        //     , { "name": "XYZ", "email": "xyz@gmail.com", "address": "Hyderabad", "CGPA": "3.82", "pe": 3, "skills": { "html": 65, "css": 90, "js": 75 } }
+        //     , { "name": "DEF", "email": "def@gmail.com", "address": "Kerala", "CGPA": "3.72", "pe": 8, "skills": { "html": 90, "css": 85, "js": 80 } }];
+
+
+
+        // var karr = [{ "name": "PQR", "email": "pqr@gmail.com", "address": "Banglore", "CGPA": "3.67", "pe": 6, "skills": { "and": 70, "java": 80, "flut": 40 } }
+        //     , { "name": "CVR", "email": "cvr@gmail.com", "address": "Mumbai", "CGPA": "3.81", "pe": 1, "skills": { "and": 80, "java": 90, "flut": 60 } }
+        //     , { "name": "RSK", "email": "rsk@gmail.com", "address": "Banglore", "CGPA": "3.91", "pe": 3, "skills": { "and": 80, "java": 80, "flut": 60 } }
+        //     , { "name": "DDL", "email": "ddl@gmail.com", "address": "Kerala", "CGPA": "3.72", "pe": 8, "skills": { "and": 50, "java": 60, "flut": 65 } }];
+
+
+
+        function disp() {
+            
+            console.log(arr.length);
+            for (var i = 0; i < arr.length; i++) {
+                var row = document.createElement("tr");
+                row.id = i;
+                var data = new Array(4);
+                data[0] = arr[i].name;
+
+                data[1] = arr[i].email;
+                data[2] = arr[i].CGPA;
+                data[3] = arr[i].experience;
+
+                for (var j = 0; j < data.length; j++) {
+                    var td = document.createElement("td");
+                    td.innerHTML = data[j];
+                    row.appendChild(td);
+
+                }
+                row.addEventListener("mouseover", function () {
+
+                    drawChart(this.id);
+                });
+                // row.addEventListener("mouseout", function () {
+                //     mout();
+                // });
+                document.getElementById("t1").appendChild(row);
+            }
+        }
+
+        function clear(parent) {
+            while (parent.childNodes.length > 2) {
+                parent.removeChild(parent.lastChild);
+            }
+        }
+        document.getElementById("cgpa").addEventListener("click", function () {
+            arr.sort(function (a, b) {
+                return a.CGPA - b.CGPA;
+            });
+
+            if (msorted == true) {
+                arr.reverse();
+                msorted = false;
+            }
+
+            else {
+                msorted = true;
+            }
+            clear(t1);
+            disp();
+
+        });
+
+        document.getElementById("name").addEventListener("click", function () {
+
+            arr = arr.sort(function (a, b) {
+                var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
+            if (nsorted == true) {
+                arr.reverse();
+                nsorted = false;
+            }
+
+            else {
+                nsorted = true;
+            }
+            clear(t1);
+            disp();
+
+        });
+
+        document.getElementById("pe").addEventListener("click", function () {
+            arr.sort(function (a, b) {
+                return a.pe - b.pe;
+            });
+            if (esorted == true) {
+                arr.reverse();
+                esorted = false;
+            }
+
+            else {
+                esorted = true;
+            }
+            clear(t1);
+            disp();
+
+
+        });
+
+
+
+        function disp2() {
+
+            for (var i = 0; i < karr.length; i++) {
+                var row = document.createElement("tr");
+                row.id = i;
+                var data = new Array(4);
+                data[0] = karr[i].name;
+                data[1] = karr[i].email;
+                data[2] = karr[i].CGPA;
+                data[3] = karr[i].experience;
+
+                for (var j = 0; j < data.length; j++) {
+                    var td = document.createElement("td");
+                    td.innerHTML = data[j];
+                    row.appendChild(td);
+
+                }
+                row.addEventListener("mouseover", function () {
+
+                    drawChart2(this.id);
+                });
+                // row.addEventListener("mouseout", function () {
+                //     mout();
+                // });
+                document.getElementById("t2").appendChild(row);
+            }
+        }
+
+        document.getElementById("cgpa2").addEventListener("click", function () {
+            karr.sort(function (a, b) {
+                return a.CGPA - b.CGPA;
+            });
+
+            if (msorted2 == true) {
+                karr.reverse();
+                msorted2 = false;
+            }
+
+            else {
+                msorted2 = true;
+            }
+            clear(t2);
+            disp2();
+
+        });
+
+        document.getElementById("name2").addEventListener("click", function () {
+
+            karr = karr.sort(function (a, b) {
+                var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            });
+            if (nsorted2 == true) {
+                karr.reverse();
+                nsorted2 = false;
+            }
+
+            else {
+                nsorted2 = true;
+            }
+            clear(t2);
+            disp2();
+
+        });
+
+        document.getElementById("pe2").addEventListener("click", function () {
+            karr.sort(function (a, b) {
+                return a.pe - b.pe;
+            });
+            if (esorted2 == true) {
+                karr.reverse();
+                esorted2 = false;
+            }
+
+            else {
+                esorted2 = true;
+            }
+            clear(t2);
+            disp2();
+
+
+        });
+
+        function mout() {
+            document.getElementsByClassName("dropdown-content")[0].style.display = "none";
+        }
+
+        function drawChart(id) {
+            if (id) {
+                var data = google.visualization.arrayToDataTable([
+                    ['Skill', 'Rating', { role: 'style' }],
+                    ['HTML', parseInt(arr[id].html), 'color: red'],
+                    ['CSS', parseInt(arr[id].css), 'color: lightskyblue'],
+                    ['Javascript', parseInt(arr[id].javascript), 'color: gold'],
+                    ['SQL', parseInt(arr[id].sql), 'color: violet']
+                ]);
+
+                var options = {
+                    'title': 'Student Name: ' + arr[id].name,
+                    'legend': { position: "none" }
+
+                };
+
+                var chart = new google.visualization.BarChart(document.getElementsByClassName("dropdown-content")[0]);
+                document.getElementsByClassName("dropdown-content")[0].style.backgroundColor = "#f9f9f9";
+                chart.draw(data, options);
+
+            }
+
+        }
+
+        function drawChart2(id) {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Skill', 'Rating', { role: 'style' }],
+                ['Android', parseInt(karr[id].Android), 'color: lightgreen'],
+                ['Java', parseInt(karr[id].java), 'color: gold'],
+                ['Flutter', parseInt(karr[id].Flutter), 'color: blue']
+            ]);
+
+            var options = {
+                'title': 'Student Name: ' + karr[id].name,
+                'legend': { position: "none" }
+
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementsByClassName("dropdown-content")[1]);
+            document.getElementsByClassName("dropdown-content")[1].style.backgroundColor = "#f9f9f9";
+            chart.draw(data, options);
+        }
+
+    </script>
+</body>
+
+</html>

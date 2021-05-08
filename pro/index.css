@@ -1,0 +1,481 @@
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #nav {
+            /* background-color: rgb(231, 231, 231); */
+            background-color: rgb(28, 161, 179);
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        #nav>a {
+            display: block;
+            color: white;
+            float: left;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 1.25vw;
+            text-decoration: none;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        #nav>a:hover,
+        #show>a:hover {
+            /* background-color: lightsalmon; */
+            background-color: rgb(238, 91, 91);
+        }
+
+        #nav-aside>a {
+            display: block;
+            color: white;
+            float: left;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 1.25vw;
+            text-decoration: none;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        #nav-aside>a:hover {
+            /* background-color: lightsalmon; */
+            background-color: rgb(238, 91, 91);
+        }
+
+        i {
+            margin-left: 2px;
+        }
+
+        #slideshow {
+            margin: 0px;
+            padding: 0px;
+            align-content: center;
+            height: 650px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+
+
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        #firstslide {
+            width: 100%;
+            height: 500px;
+            /* background-color: lightsalmon; */
+            background-color: rgb(238, 91, 91);
+            color: white;
+            font-weight: bolder;
+            font-size: 1.5vw;
+            text-align: center;
+            padding: 150px 0;
+            animation-name: fade;
+            animation-duration: 2s;
+
+        }
+
+        #slides {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #caption {
+            /* background-color: lightsalmon; */
+            background-color: rgb(238, 91, 91);
+            display: none;
+            color: black;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            top: 80%;
+            left: 35%;
+            width: 400px;
+            /* height: 600px; */
+            z-index: 1;
+            font-size: 2vw;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        #fq {
+            font-size: 3vw;
+        }
+
+        .quotes {
+            font-size: 2.5vw;
+        }
+
+        .quotesr {
+            font-size: 2vw;
+        }
+
+        .actquote {
+            font-size: 2.5vw;
+        }
+
+        #student-reg {
+            background-color: rgb(28, 161, 179);
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 30%;
+            color: white;
+        }
+
+        .sidete {
+            float: left;
+            width: 63%;
+            font-size: 1.2vw;
+            padding: 0px;
+        }
+
+        .sideth {
+            /* background-color: rgb(255, 126, 75); */
+            background-color: rgb(238, 91, 91);
+            border: 3px solid white;
+            color: white;
+            width: 34%;
+            border-radius: 10px;
+            float: right;
+            font-style: italic;
+            text-align: center;
+            height: 93%;
+        }
+
+        .sidete>button {
+            /* background-color: rgb(255, 126, 75); */
+            background-color: green;
+            width: 130px;
+            height: 50px;
+            border: 1px solid white;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2vw;
+            position: center;
+            position: relative;
+            top: 0;
+            left: 50%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #acq-skills {
+            background-color: rgb(28, 161, 179);
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 30%;
+            color: white;
+        }
+
+        .show-courses {
+            display: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #cimg {
+            padding: 2px;
+            margin: 3px 3px 3px 25px;
+            width: 85%;
+            height: 70%;
+        }
+
+        #inds-conn {
+            background-color: rgb(28, 161, 179);
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 30%;
+            color: white;
+        }
+
+        #resass {
+            background-color: rgb(28, 161, 179);
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 5px;
+            height: 30%;
+            color: white;
+        }
+
+        #footer {
+            background-color: steelblue;
+            width: 100%;
+            height: 35%;
+            text-align: center;
+        }
+
+        #Sidenav button {
+            position: absolute;
+            left: -95px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 100px;
+            height: 80px;
+            text-decoration: none;
+            font-size: 1.2vw;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            background-color: black;
+        }
+
+        #Sidenav button:hover {
+            left: 0;
+        }
+
+        #cr {
+            font-size: 1.25vw;
+        }
+
+        #c1,
+        #c2,
+        #c3 {
+            padding: 5px;
+
+        }
+
+        #cdetails {
+            float: left;
+            list-style: none;
+            width: 50%;
+            font-size: 1.25vw;
+        }
+
+        #cdetails>li {
+            display: block;
+        }
+
+        #cus {
+            font-size: 1.25vw;
+            margin: 5px;
+            padding: 15px;
+        }
+
+        .nav-link {
+            background-color: transparent;
+        }
+
+        .active {
+            background-color: rgb(238, 91, 91);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #form {
+            padding: 20px;
+            width: 90%;
+            border: 1px solid black;
+
+            margin: auto;
+        }
+
+
+        label {
+            display: block;
+            margin: 5px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            background: #f1f1f1;
+            border-radius: 10px;
+            width: 80%;
+            height: 50px;
+            margin: 5px 5px;
+            font-size: large;
+            display: block;
+        }
+
+        input[type=submit] {
+            display: block;
+            position: relative;
+            background-color: green;
+            width: 80px;
+            height: 60px;
+            padding: 10px;
+            margin: 10px;
+            font-size: large;
+            left: 40%;
+            font-weight: bold;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        #show {
+            display: none;
+            float: right;
+
+        }
+
+        #show>span {
+            color: white;
+            float: left;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 1.25vw;
+            margin: 5px;
+            padding: 15px;
+            font-style: italic;
+        }
+
+        #show>a {
+            display: block;
+            color: white;
+            float: left;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 1.25vw;
+            text-decoration: none;
+            margin: 5px;
+            padding: 15px;
+            font-style: italic;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #show {
+            font-size: 1.25vw;
+        }
+
+        @media only screen and (max-width: 700px) {
+
+            /* #nav{
+                font-size: 4vw;
+            } */
+            #nav-aside>a {
+                padding: 8px;
+            }
+
+            #nav>a {
+                padding: 8px;
+            }
+
+            #cimg {
+                margin-left: 8px;
+                padding: 0px;
+                max-height: 70%;
+            }
+
+            #slideshow {
+                max-height: 50%;
+            }
+
+            .sidete,
+            .sideth {
+                max-height: 80%;
+                font-size: 1.5vw;
+            }
+
+            .sidete {
+                font-size: 1.5vw;
+            }
+
+            #caption {
+                max-width: 30%;
+            }
+
+            #student-reg,
+            #acq-skills,
+            #inds-conn,
+            #resass,
+            #footer,
+            #caption,
+            #nav {
+                max-height: 15%;
+            }
+
+            button {
+                font-size: medium;
+                max-width: 30%;
+                max-height: 15%;
+                font-size: 1.75vw;
+            }
+
+            #cdetails {
+                float: left;
+                max-width: 40%;
+            }
+
+            #cus {
+                float: right;
+                max-width: 40%;
+            }
+
+            #footer {
+                font-size: 2vw;
+            }
+
+            #Sidenav button {
+                left: -88px;
+                max-width: 30%;
+                max-height: 30px;
+            }
+
+            #show {
+                font-size: 1.25vw;
+            }
+
+        }
